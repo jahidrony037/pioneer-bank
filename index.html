@@ -85,11 +85,17 @@
             const currentDepositNumber = parseFloat(currentDeposit);
             const totalDeposit = depositNumber + currentDepositNumber;
             document.getElementById("currentDeposit").innerText = totalDeposit;*/
-
-
+            
+            if (depositNumber < 0) {
+            alert("Deposit number can not be negative");     
+        }
+        else{
             updateSpanText ("currentBalance", depositNumber);
             updateSpanText ("currentDeposit", depositNumber);
-            document.getElementById("depositAmount").value ="";  
+            document.getElementById("depositAmount").value ="";
+        }
+
+              
             
         })
 
